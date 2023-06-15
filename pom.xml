@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.12</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>kopo</groupId>
+    <artifactId>Java_SpringBoot_Study_Komoran</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Java_SpringBoot_Study_Komoran</name>
+    <description>Java_SpringBoot_Study_Komoran</description>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io/</id>
+            <url>https://jitpack.io/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!--shineware의 한국어 형태소 분석기-->
+        <!-- https://mvnrepository.com/artifact/com.github.shin285/KOMORAN -->
+        <dependency>
+            <groupId>com.github.shin285</groupId>
+            <artifactId>KOMORAN</artifactId>
+            <version>3.3.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+        <!--자바용 Tess4J Tesseract » 5.2.1       -->
+        <!--# Tess4J ## 설명: Tesseract OCR API용 Java JNA 래퍼입니다.
+        Tess4J는 Apache 라이선스 v2.0에 따라 출시 및 배포됩니다.
+        ## 기능: 라이브러리는 다음에 대해 광학 문자 인식(OCR) 지원을 제공합니다.
+        TIFF, JPEG, GIF, PNG 및 BMP 이미지 형식 다중 페이지 TIFF 이미지 PDF 문서 형식        -->
+        <dependency>
+            <groupId>net.sourceforge.tess4j</groupId>
+            <artifactId>tess4j</artifactId>
+            <version>5.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
